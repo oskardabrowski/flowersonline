@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="css/style.css" rel="stylesheet" type="text/css">
+    <title>Flowers Online Konto</title>
+</head>
+<body>
+    <div class="account">
+        <div class="account-menu">
+            <div class="account-menu-user">
+                <div class="account-menu-user-img">
+                    <img src="img/pictures/users/default.jpg">
+                </div>
+                <div class="flexColumn">
+                    <div class="account-menu-user-name">UserName</div>
+                    <div class="account-menu-user-email">exampleMail@wp.pl</div>
+                </div>
+                <div class="account-menu-user-mobile">
+                    <div class="account-menu-user-mobile-1"></div>
+                    <div class="account-menu-user-mobile-2"></div>
+                    <div class="account-menu-user-mobile-3"></div>
+                </div>
+            </div>
+            <div class="account-menu-buttons">
+                <ul class="account-menu-buttons-list">
+                    <li>
+                        <a>
+                            <svg>
+                                <use xlink:href="img/icons/person_outline_black_24dp.svg#person"></use>
+                            </svg>
+                            <p>Moje Konto</p></li>
+                        </a>
+                    <li>
+                        <a>
+                            <svg>
+                                <use xlink:href="img/icons/shopping_bag_black_24dp.svg#bag"></use>
+                            </svg>
+                            <p>Moje Zamównienia</p></li>
+                        </a>
+                    <li>
+                        <a>
+                            <svg>
+                                <use xlink:href="img/icons/favorite_border_black_24dp.svg#fav"></use>
+                            </svg>
+                            <p>Ulubione</p></li>
+                        </a>
+                    <li>
+                        <a>
+                            <svg>
+                                <use xlink:href="img/icons/lock_open_black_24dp.svg#lockOpen"></use>
+                            </svg>
+                            <p>Zmiana hasła</p></li>
+                        </a>
+                    <li>
+                        <a>
+                            <svg>
+                                <use xlink:href="img/icons/logout_black_24dp.svg#logout"></use>
+                            </svg>
+                            <p>Wyloguj</p></li>
+                        </a>
+                    <li>
+                        <a>
+                            <svg>
+                                <use xlink:href="img/icons/shopping_cart_black_24dp.svg#cart"></use>
+                            </svg>
+                            <p>Sklep</p></li>
+                        </a>
+                </ul>
+            </div>
+        </div>
+        <div class="account-body">
+            <div class="account-body-details">
+                <div class="account-body-details-header"><h1 class="standard-header">Dane użytkownika</h1></div>
+                <div class="account-body-details-img"><img src="img/pictures/users/default.jpg"></div>
+                <div class="account-body-details-form">
+                    <form action="#" method="POST" enctype="multipart/form-data">
+                        <label for="name">Zaktualizuj nazwę użytkownika:</label>
+                        <input id="name" type="text" name="name" placeholder="Nazwa użytkownika">
+                        <label for="name">Zaktualizuj grafikę:</label>
+                        <input if="file" type="file" name="userimg">
+                        <label for="name">Zaktualizuj opis:</label>
+                        <textarea id="desc" name="userdesc" placeholder="Napisz nam coś o sobie"></textarea>
+                        <button class="standard-btn account-body-details-form-submit">Zapisz Dane</button>
+                    </form>
+                </div>
+            </div>
+            <div class="account-body-orders">
+                <div class="account-body-orders-order">
+                    <h2>Zamównienie id: 1234</h2>
+                    <p>Status: <span>Opłacone</span></p>
+                    <p>Id płatności: <span>1234</span></p>
+                    <p>Zamówione produkty: Kwiat Lorem, Kwiat Ipspum, Kwiat Dolor</p>
+                    <p>Przesyłka: <span>Kurier</span></p>
+                </div>
+            </div>
+            <div class="account-body-liked">
+                <div class="card">
+                    <a href="#"  class="card__picture">
+                        <div class="card__picture-text">Kwiat Lorem</div>
+                        <img class="card__picture-img" src="img/pictures/products/1.png">
+                    </a>
+                </div>
+                <div class="card">
+                    <a href="#"  class="card__picture">
+                        <div class="card__picture-text">Kwiat Lorem</div>
+                        <img class="card__picture-img" src="img/pictures/products/1.png">
+                    </a>
+                </div>
+                <div class="card">
+                    <a href="#"  class="card__picture">
+                        <div class="card__picture-text">Kwiat Lorem</div>
+                        <img class="card__picture-img" src="img/pictures/products/1.png">
+                    </a>
+                </div>
+            </div>
+            <div class="account-body-password">
+                <div class="account-body-password-header"><h1 class="standard-header">Zmiana hasła do konta</h1></div>
+                <form class="account-body-password-form" action="#" method="POST">
+                    <label for="old">Wpisz stare hasło:</label>
+                    <input id="old" type="password" name="oldPassword">
+                    <div></div>
+                    <label for="new1">Wpisz nowe hasło:</label>
+                    <input id="new1" type="password" name="newPassword1">
+                    <div></div>
+                    <label for="new2">Powtórz hasło:</label>
+                    <input id="new2" type="password" name="newPassword2">
+                    <div></div>
+                    <button class="standard-btn">Zaktualizuj</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="js/mobileAccount.js"></script>
+</body>
+</html>

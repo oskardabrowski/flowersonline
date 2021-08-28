@@ -1,0 +1,59 @@
+footer {
+    background-color: black;
+    color: white;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin: 0;
+
+    @include mediaQuery(tablet7) {
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+
+    @include mediaQuery(phone6) {
+        font-size: 1rem;
+    }
+
+    & > div {
+        display: flex;
+    }
+
+    .footerItem {
+        margin: 1rem;
+
+        & > div {
+            padding: .5rem 0rem .5rem 0rem;
+            width: 15vw;
+
+            @include mediaQuery(tablet7) {
+                width: 100%;
+            }
+
+
+            &:not(:first-child) {
+                border-top: 1px solid white;
+            }
+        }
+
+        &-copy {
+            margin: 1rem;
+            display: flex;
+            flex-direction: column;
+
+            & > div:last-child {
+                margin-top: 2rem;
+            }
+        }
+
+        .itemlinks {
+            color: white;
+            text-decoration: none;
+            transition: all .5s ease-in-out;
+
+            &:hover {
+                color: #1D94D5;
+            }
+        }
+    }
+}
