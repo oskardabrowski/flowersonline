@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="pl">
+    <head>
+        <title>Internetowa Kwiaciarnia</title>
+        <meta name="viewport" content="width=device-width, initial=scale=1">
+        <meta charset="utf-8">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Caveat&family=Courgette&family=Lato:ital,wght@1,300&family=MonteCarlo&family=WindSong:wght@500&display=swap" rel="stylesheet">
+        <link href="css/style.css" rel="stylesheet" type="text/css">
+        <script src="https://js.stripe.com/v3/"></script>
+        <script src="https://polyfill.io/v3/polyfill.min.js?version=3.52.1&features=fetch"></script>
+        <script src="client3.js" defer></script>
+    </head>
+    <body>
+        <header class="home-website-header">
+            <div class="home-website-header-picture">
+                <div class="home-website-header-picture-logo">Kwiaty Online</div>
+                <div class="home-website-header-picture-slogan">
+                    <div class="home-website-header-picture-slogan-1"><span class="home-website-header-picture-slogan-1-span">Kwiaty odzwierciedlają piękno</span></div>
+                    <div class="home-website-header-picture-slogan-2"><span class="home-website-header-picture-slogan-2-span">oraz nasze dusze</span></div>
+                    <div class="home-website-header-picture-slogan-3"><a class="home-website-header-picture-slogan-3-span" href="products.html">Nasza Oferta</a></div>
+                </div>
+                <img class="home-website-header-picture-img" src="img/pictures/clipped/home.png">
+            </div>
+            <div class="home-website-header-nav">
+                <div class="menu-div">
+                    <div class="home-website-header-nav-div1"></div>
+                    <div class="home-website-header-nav-div2"></div>
+                    <div class="home-website-header-nav-div3"></div>
+                </div>
+                <div class="home-website-header-cart">
+                    <div class="home-website-header-cart-num">0</div>
+                    <svg>
+                        <use xlink:href="img/icons/shopping_cart_black_24dp.svg#cart"></use>
+                    </svg>
+                </div>
+                <div class="home-website-header-account">
+                    <svg>
+                        <use xlink:href="img/icons/person_outline_black_24dp.svg#person"></use>
+                    </svg>
+                </div>
+                <div class="home-website-header-nav-logo">Kwiaty Online</div>
+                <div class="home-website-header-nav-menu">
+                    <div class="home-website-header-nav-menu-flower">
+                        <img class="home-flower flower" src="img/pictures/clipped/flower-menu1.png">
+                        <img class="offer-flower flower" src="img/pictures/clipped/flower-menu2.png">
+                        <img class="about-flower flower" src="img/pictures/clipped/flower-menu3.png">
+                        <img class="contact-flower flower" src="img/pictures/clipped/flower-menu4.png">
+                    </div>
+                    <div class="home-website-header-nav-menu-btns">
+                        <div><a class="menu-link homeFlower" href="index.html">Strona Główna</a></div>
+                        <div><a class="menu-link productsFlower" href="products.html">Produkty</a></div>
+                        <div><a class="menu-link aboutFlower" href="about.html">O nas</a></div>
+                        <div><a class="menu-link contactFlower" href="contact.html">Kontakt</a></div>
+                    </div>
+                </div>
+                <div class="home-website-header-nav-menuMobile">
+                    <div class="home-website-header-nav-menuMobile-background">
+                        <div class="home-website-header-nav-menuMobile-background-1"></div>
+                        <div class="home-website-header-nav-menuMobile-background-2"></div>
+                        <div class="home-website-header-nav-menuMobile-background-3"></div>
+                    </div>
+                    <div class="home-website-header-nav-menuMobile-btns">
+                        <div><a class="menu-link homeFlower" href="index.html">Strona Główna</a></div>
+                        <div><a class="menu-link productsFlower" href="products.html">Produkty</a></div>
+                        <div><a class="menu-link aboutFlower" href="about.html">O nas</a></div>
+                        <div><a class="menu-link contactFlower" href="contact.html">Kontakt</a></div>
+                        <div><a class="menu-link accountFlower" href="contact.html">Konto</a></div>
+                    </div>
+                </div>
+            </div>
+            <div class="cart">
+                <div class="cart-container">
+                    <div class="cart-container-exit"></div>
+                    <div class="cart-container-summary">
+                        <div>Kupujesz jako gość</div>
+                        <div>Całkowita cena: <span class="totalPrice">0zł</span></div>
+                    </div>
+                    <div class="cart-container-products">
+                        <div class="cart-container-products-empty">
+                            <svg>
+                                <use xlink:href="img/icons/shopping_cart_black_24dp.svg#cart"></use>
+                            </svg>
+                            <h3>Twój koszyk jest pusty</h3>
+                        </div>
+                        <div class="cart-container-products-item">
+                            <img src='img/pictures/products/1.png'>
+                            <div class="cart-container-products-item-desc">
+                                <span>95zł</span>
+                            </div>
+                            <div class="cart-container-products-item-desc">
+                                <h1 class="standard-header">Kwiat Lorem</h1>
+                                <p>Brief Description - Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur, dicta!</p>
+                            </div>
+                            <button class="cart-container-products-item-delete">
+                                <svg>
+                                    <use xlink:href="img/icons/delete_black_24dp.svg#del"></use>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="cart-container-next next-prod"><button class="standard-btn">Następny krok</button></div>
+                    <div class="cart-container-delivery">
+                        <form>
+                            <h1>Wybierz rodzaj dostawy</h1>
+                            <input type="radio" name="dlivery" value="kurier" checked>Kurier - 15zł<br>
+                            <input type="radio" name="dlivery" value="kurier">Poczta - 5zł<br>
+                            <input type="radio" name="dlivery" value="kurier">Paczkomat - 15zł<br>
+                        </form>
+                        <button class="back">
+                            <svg>
+                                <use xlink:href="img/icons/keyboard_arrow_left_black_24dp.svg#left">
+                            </svg>
+                            Poprzedni krok
+                        </button>
+                    </div>
+                    <div class="cart-container-next next-delivery"><button class="standard-btn">Następny krok</button></div>
+                    <div class="cart-container-checkout">
+                        <div class="cart-container-checkout-form">
+                            <div class="cart-container-checkout-form-card">
+                                <div class="cart-container-checkout-form-card-top">
+                                    <div class="cart-container-checkout-form-card-top-data">
+                                        <form>
+                                            <input type="text" name="name" placeholder="Wpisz swoje imię">
+                                            <input type="text" name="surname" placeholder="Wpisz swoje nazwisko">
+                                            <input type="text" name="postcode" placeholder="Podaj kod pocztowy">
+                                            <input type="text" name="city" placeholder="Podaj miasto">
+                                            <input type="text" name="streetAndHouse" placeholder="Podaj adres">
+                                        </form>
+                                    </div>
+                                    <div class="cart-container-checkout-form-card-top-chip">
+                                        <svg>
+                                            <use xlink:href="img/icons/credit-card.svg#chip"></use>
+                                        </svg>
+                                    </div>
+                                </div>
+                                <div class="cart-container-checkout-form-card-bottom">
+                                    <form id="payment-form">
+                                        <div id="card-element"><!--Stripe.js injects the Card Element--></div>
+                                        <button id="submit">
+                                          <div class="spinner hidden" id="spinner"></div>
+                                          <span id="button-text">Pay now</span>
+                                        </button>
+                                        <p id="card-error" role="alert"></p>
+                                        <p class="result-message hidden">
+                                          Payment succeeded, see the result in your
+                                          <a href="" target="_blank">Stripe dashboard.</a> Refresh the page to pay again.
+                                        </p>
+                                      </form>
+                                </div>
+                            </div>
+                            <div class="cart-container-checkout-form-deliveryAddress"></div>
+                        </div>
+                        <div class="attributtion">Chip icon made by <a href="https://www.freepik.com" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>
+                        <button class="back">
+                            <svg>
+                                <use xlink:href="img/icons/keyboard_arrow_left_black_24dp.svg#left">
+                            </svg>
+                            Poprzedni krok
+                        </button>
+                    </div>
+                    <div class="cart-container-paymentSuccess">
+                        <svg>
+                            <use xlink:href="img/icons/task_alt_black_24dp.svg#check"></use>
+                        </svg>
+                        <h1>Twoje zamówienie zostało przyjęte do realizacji</h1>
+                        <h3>Twoje id:</h3>
+                    </div>
+                    <div class="cart-container-paymentDanger">
+                        <svg>
+                            <use xlink:href="img/icons/highlight_off_black_24dp.svg#danger"></use>
+                        </svg>
+                        <h1>Coś poszło nie tak! Spróbuj ponownie później</h1>
+                        <h3>Twoje id:</h3>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <div class="newproducts lazyload">
+            <div class="newproducts-header"><h1 class="standard-header">Najnowsza oferta</h1></div>
+            <div class='container-cards'>
+                <div class="card">
+                    <div class="card__picture">
+                        <div class="card__picture-price">
+                            <p>95zł</p>
+                        </div>
+                        <a href="#" class="card__picture-addToCart">
+                            <svg>
+                                <use xlink:href="img/icons/add_circle_outline_black_24dp.svg#add"></use>
+                            </svg>
+                        </a>
+                        <a href="product-page.html" class="card__picture-info">
+                            <svg>
+                                <use xlink:href="img/icons/info_black_24dp.svg#info"></use>
+                            </svg>
+                        </a>
+                        <button class="card__picture-observe">
+                            <svg>
+                                <use xlink:href="img/icons/favorite_border_black_24dp.svg#fav"></use>
+                            </svg>
+                        </button>
+                        <div class="card__picture-text">Kwiat Lorem</div>
+                        <img class="card__picture-img" src="img/pictures/products/1.png">
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card__picture">
+                        <a href="#" class="card__picture-addToCart">
+                            <svg>
+                                <use xlink:href="img/icons/add_circle_outline_black_24dp.svg#add"></use>
+                            </svg>
+                        </a>
+                        <a href="#" class="card__picture-info">
+                            <svg>
+                                <use xlink:href="img/icons/info_black_24dp.svg#info"></use>
+                            </svg>
+                        </a>
+                        <button class="card__picture-observe">
+                            <svg>
+                                <use xlink:href="img/icons/favorite_border_black_24dp.svg#fav"></use>
+                            </svg>
+                        </button>
+                        <div class="card__picture-text">Kwiat Lorem</div>
+                        <img class="card__picture-img" src="img/pictures/products/1.png">
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card__picture">
+                        <a href="#" class="card__picture-addToCart">
+                            <svg>
+                                <use xlink:href="img/icons/add_circle_outline_black_24dp.svg#add"></use>
+                            </svg>
+                        </a>
+                        <a href="#" class="card__picture-info">
+                            <svg>
+                                <use xlink:href="img/icons/info_black_24dp.svg#info"></use>
+                            </svg>
+                        </a>
+                        <button class="card__picture-observe">
+                            <svg>
+                                <use xlink:href="img/icons/favorite_border_black_24dp.svg#fav"></use>
+                            </svg>
+                        </button>
+                        <div class="card__picture-text">Kwiat Lorem</div>
+                        <img class="card__picture-img" src="img/pictures/products/1.png">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="load-image">
+            <img src="img/pictures/clipped/flowers1.png">
+        </div>
+        <div class="about">
+            <div class="about-content">
+                <div class="about-content-img"><img src="img/pictures/clipped/flowers2.png"></div>
+                <div class="about-content-text">
+                    <div class="about-content-header">
+                        <h1 class="standard-header">Odkryj najpiękniejsze kwiaty świata
+                        oraz najlepsze okazy dla twojego domu.</h1>
+                    </div>
+                    <div>
+                        <p>Kwiaty z najdalszych stron świata w twoim domu</p>
+                        <p>Najrzadsze okazy na rynku</p>
+                        <p>Zachwycające, imponujące i ciekawe</p>
+                        <p>Nasza firma dostarcza najlepsze kwiaty w polsce - Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium saepe hic voluptatibus doloribus dolores dignissimos excepturi, et quo sit! Tenetur praesentium harum magni vel ea autem id fugiat, perspiciatis unde ut eaque commodi doloribus debitis ipsam sit dolore nostrum vero ipsum, cum tempora, odio placeat! Sequi molestiae quod quo eligendi?</p>
+                        <a href="about.html" class="standard-btn">Dowiedz się o nas więcej</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="newsletter-bar">
+            <div class="newsletter-bar-center">
+                <div>
+                    <h3>Zapisz się do naszego newslettera</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem quo possimus sit nulla voluptas. A rerum recusandae qui placeat dolore.</p>
+                </div>
+                <form action="" method="POST">
+                    <input class="mail" type='email' placeholder="Tu wpisz swój email">
+                    <input class="standard-btn submit" type='submit' value="Zapisz się">
+                </form>
+            </div>
+            <img src="img/pictures/clipped/newsletter-bar.png">
+        </div>
+        <footer>
+            <div>
+                <div class="footerItem">
+                    <div><a class="itemlinks" href="#">Kontakt</a></div>
+                    <div><a class="itemlinks" href="#">Polityka prywatności</a></div>
+                    <div><a class="itemlinks" href="#">Właściciel</a></div>
+                    <div><a class="itemlinks" href="#">Blog</a></div>
+                </div>
+                <div class="footerItem">
+                    <div><a class="itemlinks" href="#">Snapchat</a></div>
+                    <div><a class="itemlinks" href="#">Facebook</a></div>
+                    <div><a class="itemlinks" href="#">Printerest</a></div>
+                    <div><a class="itemlinks" href="#">Discord</a></div>
+                </div>
+            </div>
+            <div class="footerItem-copy">
+                <div>Copyright ©KwiatyOnline <span class="currentYear">2020</span></div>
+                <div>Uwaga jest to przykładowy projekt stworzony <br> w celu nauki! Autor: Oskar Dąbrowski</div>
+            </div>
+        </footer>
+        <script src="js/jquery3.6.js"></script>
+        <script src="js/menu.js"></script>
+        <script src="js/cards.js"></script>
+        <script src="js/cart.js"></script>
+        <script src="js/lazyLoad.js"></script>
+
+    </body>
+</html>
