@@ -1,0 +1,24 @@
+<div class="aboutCompany">
+            <div class="aboutCompany-header"><h1 class="standard-header">Krótka historia naszej firmy</h1></div>
+            <div class="aboutCompany company1">
+                <div class="padding1"><h2 class="standard-header">Zaczynaliśmy jako mała firma rodzinna</h2></div>
+                <div class="flex">
+                    <img src="img/pictures/clipped/flower-history1.png">
+                    <p class="padding1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad modi illo alias perferendis, et, sit officiis tempora vitae eum atque ipsam doloremque neque voluptatem praesentium facere velit mollitia voluptate molestias! Culpa, aspernatur adipisci pariatur voluptate nam magni. Eaque natus, quo voluptatum porro, laboriosam veniam odit inventore consectetur eligendi aspernatur praesentium. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dignissimos odit repellat omnis hic quia sint. Suscipit quia animi aliquam illum voluptates magnam ipsum, dolorum ut error vel voluptas nulla itaque dignissimos nam consectetur inventore repudiandae deserunt, pariatur molestiae consequuntur natus tenetur veniam minus. Possimus deserunt quidem tempora, temporibus itaque sit obcaecati aspernatur dolore aliquid accusantium error cupiditate voluptatum voluptatem dignissimos dolor harum ab porro maxime architecto optio iure, repellendus, quos quia?</p>
+                </div>
+            </div>
+            <div class="aboutCompany company2">
+                <div class="padding1"><h2 class="standard-header">W roku 2005 zanotowaliśmy rekordowy wzrost</h2></div>
+                <div class="flex-reverse">
+                    <img src="img/pictures/clipped/flower-history2.png">
+                    <p class="paddingright1"> Dignissimos odit repellat omnis hic quia sint. Suscipit quia animi aliquam illum voluptates magnam ipsum, dolorum ut error vel voluptas nulla itaque dignissimos nam consectetur inventore repudiandae deserunt, pariatur molestiae consequuntur natus tenetur veniam minus. Possimus deserunt quidem tempora, temporibus itaque sit obcaecati aspernatur dolore aliquid accusantium error cupiditate voluptatum voluptatem dignissimos dolor harum ab porro maxime architecto optio iure, repellendus, quos quia? Lorem ipsum dolor sit amet consectetur adipisicing elit. At quibusdam sed dignissimos illo atque animi deserunt laboriosam, minus maiores libero praesentium modi suscipit inventore molestias architecto. At, velit, hic numquam atque laudantium commodi, ea illum similique tempore dignissimos quo soluta. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga dolor inventore soluta, labore praesentium aut necessitatibus earum fugit consequatur error ipsam eius eaque voluptas tempora, delectus quisquam facilis, similique maiores.</p>
+                </div>
+            </div>
+            <div class="aboutCompany company3">
+                <div class="padding1"><h2 class="standard-header">Dzisiaj jesteśmy dobrze rozwiniętą firmą</h2></div>
+                <div class="flex">
+                    <img src="img/pictures/clipped/flower-history3.png">
+                    <p class="padding1">Lorem ipsum dolor sit amet consectetur adipisicing elit.  Dignissimos odit repellat omnis hic quia sint. Suscipit quia animi aliquam illum voluptates magnam ipsum, dolorum ut error vel voluptas nulla itaque dignissimos nam consectetur inventore repudiandae deserunt, pariatur molestiae consequuntur natus tenetur veniam minus. Possimus deserunt quidem tempora, temporibus itaque sit obcaecati aspernatur dolore aliquid accusantium error cupiditate voluptatum voluptatem dignissimos dolor harum ab porro maxime architecto optio iure, repellendus, quos quia?  Dignissimos odit repellat omnis hic quia sint. Suscipit quia animi aliquam illum voluptates magnam ipsum, dolorum ut error vel voluptas nulla itaque dignissimos nam consectetur inventore repudiandae deserunt, pariatur molestiae consequuntur natus tenetur veniam minus. Possimus deserunt quidem tempora, temporibus itaque sit obcaecati aspernatur dolore aliquid accusantium error cupiditate voluptatum voluptatem dignissimos dolor harum ab porro maxime architecto optio iure, repellendus, quos quia? Voluptatem tempore error facilis similique incidunt odio deleniti nulla facere vero suscipit earum eius velit omnis numquam, dolores perferendis sunt reiciendis delectus alias voluptate quo rem recusandae veniam! Dolorum sed, sapiente quisquam odio, expedita libero illo voluptatem reprehenderit accusamus nam rerum, quos explicabo reiciendis atque ullam aperiam. Odit aliquam nobis eveniet atque blanditiis iure, necessitatibus ipsa et!</p>
+                </div>
+            </div>
+        </div>
